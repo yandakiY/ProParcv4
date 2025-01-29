@@ -1,0 +1,101 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LeptonXLiteTheme": {
+      "version": "4.0.4",
+      "isInstalled": true
+    },
+    "Volo.Abp.Account": {
+      "version": "9.0.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "9.0.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "9.0.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "9.0.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "9.0.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "9.0.3",
+      "isInstalled": true
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "9.0.3",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "ProParcv4.Application": {
+      "path": "src/ProParcv4.Application/ProParcv4.Application.abppkg",
+      "folder": "src"
+    },
+    "ProParcv4.Application.Tests": {
+      "path": "test/ProParcv4.Application.Tests/ProParcv4.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "ProParcv4.Domain.Shared": {
+      "path": "src/ProParcv4.Domain.Shared/ProParcv4.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "ProParcv4.Application.Contracts": {
+      "path": "src/ProParcv4.Application.Contracts/ProParcv4.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "ProParcv4.HttpApi": {
+      "path": "src/ProParcv4.HttpApi/ProParcv4.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "ProParcv4.HttpApi.Client": {
+      "path": "src/ProParcv4.HttpApi.Client/ProParcv4.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "ProParcv4.EntityFrameworkCore.Tests": {
+      "path": "test/ProParcv4.EntityFrameworkCore.Tests/ProParcv4.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "ProParcv4.EntityFrameworkCore": {
+      "path": "src/ProParcv4.EntityFrameworkCore/ProParcv4.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "ProParcv4.TestBase": {
+      "path": "test/ProParcv4.TestBase/ProParcv4.TestBase.abppkg",
+      "folder": "test"
+    },
+    "ProParcv4.Domain.Tests": {
+      "path": "test/ProParcv4.Domain.Tests/ProParcv4.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "ProParcv4.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/ProParcv4.HttpApi.Client.ConsoleTestApp/ProParcv4.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "ProParcv4.DbMigrator": {
+      "path": "src/ProParcv4.DbMigrator/ProParcv4.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "ProParcv4.HttpApi.Host": {
+      "path": "src/ProParcv4.HttpApi.Host/ProParcv4.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "ProParcv4.Domain": {
+      "path": "src/ProParcv4.Domain/ProParcv4.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}

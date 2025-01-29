@@ -1,0 +1,48 @@
+﻿@page
+@model ProParcv4.Pages.vehicules.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Vehicule</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                
+                <label asp-for="Vehicule.Matricule" class="control-label"></label>
+                <input asp-for="Vehicule.Matricule" class="form-control" />
+                <span asp-validation-for="Vehicule.Matricule" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Vehicule.Marque" class="control-label"></label>
+                <input asp-for="Vehicule.Marque" class="form-control" />
+                <span asp-validation-for="Vehicule.Marque" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                
+                <label asp-for="Vehicule.DateFabrication" class="control-label"></label>
+                <input asp-for="Vehicule.DateFabrication" class="form-control" />
+                <span asp-validation-for="Vehicule.DateFabrication" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Vehicule.Id" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
