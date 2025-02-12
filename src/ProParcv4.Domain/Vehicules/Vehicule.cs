@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProParcv4.Maintenances;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace ProParcv4.Vehicules
         public string Matricule { get; set; }
         public string Marque { get; set; }
         public DateTime DateFabrication { get; set; }
+
+        public List<Maintenance> Maintenances { get; set; } = new List<Maintenance>();
 
     }
 }

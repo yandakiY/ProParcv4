@@ -17,6 +17,8 @@ using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using ProParcv4.Vehicules;
 using System;
+using ProParcv4.Maintenances;
+using System.Reflection.Emit;
 
 namespace ProParcv4.EntityFrameworkCore;
 
@@ -32,6 +34,7 @@ public class ProParcv4DbContext :
 
     public DbSet<Book> Books { get; set; }
     public DbSet<Vehicule> Vehicules { get; set; }
+    public DbSet<Maintenance> Maintenances { get; set; }
 
     #region Entities from the modules
 
@@ -100,9 +103,14 @@ public class ProParcv4DbContext :
             v.Property(x => x.Marque).IsRequired();
             v.Property(x => x.Matricule).IsRequired();
             v.Property<DateTime>("DateFabrication");
-
         });
-        
+
+        builder.Entity<Maintenance>()
+            .HasOne(m => m.Vehicule)
+            .WithMany(v => v.Maintenances)
+            .HasForeignKey(m => m.VehiculeId)
+            .OnDelete(DeleteBehavior.Cascade);
+
         /* Configure your own tables/entities inside here */
 
         //builder.Entity<YourEntity>(b =>
