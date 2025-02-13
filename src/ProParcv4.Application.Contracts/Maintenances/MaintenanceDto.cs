@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProParcv4.Vehicules;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace ProParcv4.Maintenances
         public required Guid VehiculeId { get; set; }
         public required string Description { get; set; }
         public required DateTime DateMaintenance { get; set; }
+        public VehiculeDto? Vehicule { get; set; }
     }
 
 }

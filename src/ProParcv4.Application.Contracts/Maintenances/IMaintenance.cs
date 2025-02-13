@@ -15,5 +15,6 @@ namespace ProParcv4.Maintenances
         Task<MaintenanceDto> UpdateMaintenance(MaintenanceDto maintenance);
         Task<MaintenanceDto> CreateMaintenance(MaintenanceDto maintenance);
         Task DeleteMaintenance(Guid id);
+        Task<List<MaintenanceDto>> GetListMaintenanceByVehiculeId(Guid vehiculeId);
     }
 }

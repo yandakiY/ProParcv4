@@ -1213,6 +1213,317 @@
             }
           }
         },
+        "ProParcv4.Maintenances.MaintenanceService": {
+          "controllerName": "Maintenance",
+          "controllerGroupName": "Maintenance",
+          "isRemoteService": true,
+          "isIntegrationService": false,
+          "apiVersion": null,
+          "type": "ProParcv4.Maintenances.MaintenanceService",
+          "interfaces": [
+            {
+              "type": "ProParcv4.Maintenances.IMaintenance",
+              "name": "IMaintenance",
+              "methods": [
+                {
+                  "name": "GetAll",
+                  "parametersOnMethod": [],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<ProParcv4.Maintenances.MaintenanceDto>",
+                    "typeSimple": "[ProParcv4.Maintenances.MaintenanceDto]"
+                  }
+                },
+                {
+                  "name": "GetMaintenanceById",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "ProParcv4.Maintenances.MaintenanceDto",
+                    "typeSimple": "ProParcv4.Maintenances.MaintenanceDto"
+                  }
+                },
+                {
+                  "name": "UpdateMaintenance",
+                  "parametersOnMethod": [
+                    {
+                      "name": "maintenance",
+                      "typeAsString": "ProParcv4.Maintenances.MaintenanceDto, ProParcv4.Application.Contracts",
+                      "type": "ProParcv4.Maintenances.MaintenanceDto",
+                      "typeSimple": "ProParcv4.Maintenances.MaintenanceDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "ProParcv4.Maintenances.MaintenanceDto",
+                    "typeSimple": "ProParcv4.Maintenances.MaintenanceDto"
+                  }
+                },
+                {
+                  "name": "CreateMaintenance",
+                  "parametersOnMethod": [
+                    {
+                      "name": "maintenance",
+                      "typeAsString": "ProParcv4.Maintenances.MaintenanceDto, ProParcv4.Application.Contracts",
+                      "type": "ProParcv4.Maintenances.MaintenanceDto",
+                      "typeSimple": "ProParcv4.Maintenances.MaintenanceDto",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "ProParcv4.Maintenances.MaintenanceDto",
+                    "typeSimple": "ProParcv4.Maintenances.MaintenanceDto"
+                  }
+                },
+                {
+                  "name": "DeleteMaintenance",
+                  "parametersOnMethod": [
+                    {
+                      "name": "id",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Void",
+                    "typeSimple": "System.Void"
+                  }
+                },
+                {
+                  "name": "GetListMaintenanceByVehiculeId",
+                  "parametersOnMethod": [
+                    {
+                      "name": "vehiculeId",
+                      "typeAsString": "System.Guid, System.Private.CoreLib",
+                      "type": "System.Guid",
+                      "typeSimple": "string",
+                      "isOptional": false,
+                      "defaultValue": null
+                    }
+                  ],
+                  "returnValue": {
+                    "type": "System.Collections.Generic.List<ProParcv4.Maintenances.MaintenanceDto>",
+                    "typeSimple": "[ProParcv4.Maintenances.MaintenanceDto]"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": {
+            "CreateMaintenanceByMaintenanceDto": {
+              "uniqueName": "CreateMaintenanceByMaintenanceDto",
+              "name": "CreateMaintenance",
+              "httpMethod": "POST",
+              "url": "api/app/maintenance/maintenance",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "maintenanceDto",
+                  "typeAsString": "ProParcv4.Maintenances.MaintenanceDto, ProParcv4.Application.Contracts",
+                  "type": "ProParcv4.Maintenances.MaintenanceDto",
+                  "typeSimple": "ProParcv4.Maintenances.MaintenanceDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "maintenanceDto",
+                  "name": "maintenanceDto",
+                  "jsonName": null,
+                  "type": "ProParcv4.Maintenances.MaintenanceDto",
+                  "typeSimple": "ProParcv4.Maintenances.MaintenanceDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "ProParcv4.Maintenances.MaintenanceDto",
+                "typeSimple": "ProParcv4.Maintenances.MaintenanceDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ProParcv4.Maintenances.IMaintenance"
+            },
+            "DeleteMaintenanceById": {
+              "uniqueName": "DeleteMaintenanceById",
+              "name": "DeleteMaintenance",
+              "httpMethod": "DELETE",
+              "url": "api/app/maintenance/{id}/maintenance",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Void",
+                "typeSimple": "System.Void"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ProParcv4.Maintenances.IMaintenance"
+            },
+            "GetAll": {
+              "uniqueName": "GetAll",
+              "name": "GetAll",
+              "httpMethod": "GET",
+              "url": "api/app/maintenance",
+              "supportedVersions": [],
+              "parametersOnMethod": [],
+              "parameters": [],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<ProParcv4.Maintenances.MaintenanceDto>",
+                "typeSimple": "[ProParcv4.Maintenances.MaintenanceDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ProParcv4.Maintenances.IMaintenance"
+            },
+            "GetMaintenanceByIdById": {
+              "uniqueName": "GetMaintenanceByIdById",
+              "name": "GetMaintenanceById",
+              "httpMethod": "GET",
+              "url": "api/app/maintenance/{id}/maintenance-by-id",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "id",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "id",
+                  "name": "id",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "ProParcv4.Maintenances.MaintenanceDto",
+                "typeSimple": "ProParcv4.Maintenances.MaintenanceDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ProParcv4.Maintenances.IMaintenance"
+            },
+            "UpdateMaintenanceByMaintenanceDto": {
+              "uniqueName": "UpdateMaintenanceByMaintenanceDto",
+              "name": "UpdateMaintenance",
+              "httpMethod": "PUT",
+              "url": "api/app/maintenance/maintenance",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "maintenanceDto",
+                  "typeAsString": "ProParcv4.Maintenances.MaintenanceDto, ProParcv4.Application.Contracts",
+                  "type": "ProParcv4.Maintenances.MaintenanceDto",
+                  "typeSimple": "ProParcv4.Maintenances.MaintenanceDto",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "maintenanceDto",
+                  "name": "maintenanceDto",
+                  "jsonName": null,
+                  "type": "ProParcv4.Maintenances.MaintenanceDto",
+                  "typeSimple": "ProParcv4.Maintenances.MaintenanceDto",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "ProParcv4.Maintenances.MaintenanceDto",
+                "typeSimple": "ProParcv4.Maintenances.MaintenanceDto"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ProParcv4.Maintenances.IMaintenance"
+            },
+            "GetListMaintenanceByVehiculeIdByVehiculeId": {
+              "uniqueName": "GetListMaintenanceByVehiculeIdByVehiculeId",
+              "name": "GetListMaintenanceByVehiculeId",
+              "httpMethod": "GET",
+              "url": "api/app/maintenance/maintenance-by-vehicule-id/{vehiculeId}",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "vehiculeId",
+                  "typeAsString": "System.Guid, System.Private.CoreLib",
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "vehiculeId",
+                  "name": "vehiculeId",
+                  "jsonName": null,
+                  "type": "System.Guid",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": [],
+                  "bindingSourceId": "Path",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.Collections.Generic.List<ProParcv4.Maintenances.MaintenanceDto>",
+                "typeSimple": "[ProParcv4.Maintenances.MaintenanceDto]"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "ProParcv4.Maintenances.IMaintenance"
+            }
+          }
+        },
         "ProParcv4.Vehicules.VehiculeService": {
           "controllerName": "Vehicule",
           "controllerGroupName": "Vehicule",
@@ -4257,6 +4568,51 @@
         }
       ]
     },
+    "ProParcv4.Maintenances.MaintenanceDto": {
+      "baseType": "Volo.Abp.Application.Dtos.EntityDto<System.Guid>",
+      "isEnum": false,
+      "enumNames": null,
+      "enumValues": null,
+      "genericArguments": null,
+      "properties": [
+        {
+          "name": "VehiculeId",
+          "jsonName": null,
+          "type": "System.Guid",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "Description",
+          "jsonName": null,
+          "type": "System.String",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        },
+        {
+          "name": "DateMaintenance",
+          "jsonName": null,
+          "type": "System.DateTime",
+          "typeSimple": "string",
+          "isRequired": false,
+          "minLength": null,
+          "maxLength": null,
+          "minimum": null,
+          "maximum": null,
+          "regex": null
+        }
+      ]
+    },
     "ProParcv4.Vehicules.VehiculeDto": {
       "baseType": "Volo.Abp.Application.Dtos.AuditedEntityDto<System.Guid>",
       "isEnum": false,
@@ -4303,7 +4659,7 @@
         {
           "name": "DateFabrication",
           "jsonName": null,
-          "type": "System.DateOnly",
+          "type": "System.DateTime",
           "typeSimple": "string",
           "isRequired": false,
           "minLength": null,

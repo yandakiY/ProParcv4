@@ -1,0 +1,17 @@
+<div class="dashboard-container">
+  <h2>Tableau de bord : Pro Parc</h2>
+
+  <div class="stats-container">
+    <div class="stat-card">
+      <h3>Véhicules</h3>
+      <p>{{ vehiculeCount }}</p>
+      <button (click)="ajouterVehicule()">Ajouter un véhicule</button>
+    </div>
+
+    <div class="stat-card">
+      <h3>Maintenances</h3>
+      <p>{{ maintenanceCount }}</p>
+      <button (click)="ajouterMaintenance()">Ajouter une maintenance</button>
+    </div>
+  </div>
+</div>

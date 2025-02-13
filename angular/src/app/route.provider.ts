@@ -10,22 +10,21 @@ function configureRoutes(routes: RoutesService) {
     routes.add([
       {
         path: '/',
-        name: '::Menu:Home',
-        iconClass: 'fas fa-home',
+        name: '::Menu:Dashboard',
+        iconClass: 'fas fa-chart-simple',
         order: 1,
         layout: eLayoutType.application,
-      },
-      {
-        path: '/books',
-        name: '::Menu:Books',
-        iconClass: 'fas fa-book',
-        layout: eLayoutType.application,
-        requiredPolicy: 'ProParcv4.Books',
       },
       {
         path: '/vehicules',
         name: 'Vehicules',
         iconClass: 'fas fa-car',
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/maintenances',
+        name: 'Maintenances',
+        iconClass: 'fas fa-truck-monster',
         layout: eLayoutType.application,
       },
     ]);
